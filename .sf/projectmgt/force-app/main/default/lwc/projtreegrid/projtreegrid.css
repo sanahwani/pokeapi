@@ -1,0 +1,36 @@
+.red-row {
+    background-color: #f8d7da; /* Light red background */
+    color: #721c24; /* Dark red text color */
+}
+
+.red-background {
+    background-color: red;
+    color: white;
+    padding: 0.5rem;
+    text-align: center;
+}
+/* Example CSS for ensuring task names are fully visible */
+.slds-tree_grid .slds-cell {
+    white-space: nowrap; /* Prevent text from wrapping */
+    overflow: hidden; /* Hide overflow text */
+    text-overflow: ellipsis; /* Add ellipsis if text is too long */
+}
+
+
+/* Additional CSS to center text if not handled by SLDS */
+.slds-text-align_center {
+    text-align: center;
+}
+.slds-modal__container {
+    width: 50%;
+    max-width: 50rem;
+}
+
+.slds-modal__close {
+    margin-top: 1rem;
+    margin-right: 1rem;
+}
+
+.red-background {
+    background-color: red;
+}

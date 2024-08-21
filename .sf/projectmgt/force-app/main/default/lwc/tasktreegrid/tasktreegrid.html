@@ -1,0 +1,11 @@
+<template>
+    <lightning-card title="Task Tree Grid">
+        <lightning-tree-grid
+            key-field="Id"
+            data={gridData}
+            columns={gridColumns}
+            onrowaction={handleRowAction}
+            hide-checkbox-column>
+        </lightning-tree-grid>
+    </lightning-card>
+</template>

@@ -1,0 +1,35 @@
+<template>
+    <lightning-card title="Project Progress">
+        <template if:true={project}>
+            <div class="slds-grid slds-wrap slds-p-around_medium">
+                <div class="slds-col slds-size_1-of-1 slds-p-around_small">
+                    <div class="progress-circle-container">
+                        <div class="progress-circle" style={project.progressStyle}>
+                            <div class="progress-inner-circle">
+                                <span class="progress-percentage">{project.percentage}%</span>
+                            </div>
+                        </div>
+                        <div class="progress-label slds-text-heading_medium">
+                            {project.Name}
+                        </div>
+                        <div class="task-info">
+                            {project.Completed_Tasks__c} of {project.Total_Tasks__c} Tasks Completed
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </template>
+
+        <template if:true={error}>
+            <div class="slds-text-align_center slds-m-around_medium">
+                Error loading project data: {error.message}
+            </div>
+        </template>
+
+        <template if:true={noData}>
+            <div class="slds-text-align_center slds-m-around_medium">
+                No project data available.
+            </div>
+        </template>
+    </lightning-card>
+</template>

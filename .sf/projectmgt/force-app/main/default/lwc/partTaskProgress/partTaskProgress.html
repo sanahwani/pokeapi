@@ -1,0 +1,23 @@
+<template>
+    <lightning-card title="Task Progress">
+        <template if:true={task.Id}>
+            <div class="slds-grid slds-wrap slds-p-around_medium">
+                <div class="slds-col slds-size_1-of-4 slds-p-around_small">
+                    <div class="progress-circle-container">
+                        <div class="progress-circle" style={task.progressStyle}>
+                            <div class="progress-inner-circle">
+                                <span class="progress-percentage">{task.percentage}%</span>
+                            </div>
+                        </div>
+                        <div class="progress-label slds-text-heading_medium">
+                            {task.Name}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </template>
+        <template if:false={task.Id}>
+            <p>No progress data available.</p>
+        </template>
+    </lightning-card>
+</template>

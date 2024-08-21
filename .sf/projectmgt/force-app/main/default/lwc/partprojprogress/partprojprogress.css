@@ -1,0 +1,51 @@
+.progress-circle-container {
+    text-align: center;
+    position: relative;
+}
+
+.progress-circle {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin: 0 auto;
+    background: lightgray; /* Fallback color if conic-gradient fails */
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.progress-inner-circle {
+    width: 100px;
+    height: 100px;
+    background-color: white;
+    border-radius: 50%;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.progress-percentage {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: lightblue;
+}
+
+.progress-label {
+    margin-top: 15px;
+    font-size: 1.2rem;
+    color: var(--slds-text-color_inverse);
+}
+
+.task-info {
+    margin-top: 5px;
+    font-size: 0.9rem;
+    color: var(--slds-text-color_inverse_weak);
+}
+
+/* Optional hover effect for a more dynamic feel */
+.progress-circle-container:hover .progress-circle {
+    transform: scale(1.05);
+    transition: transform 0.3s ease-in-out;
+}

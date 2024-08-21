@@ -1,0 +1,12 @@
+<template>
+    <lightning-input label="Lookup" value={searchKey} onchange={handleSearchKeyChange}></lightning-input>
+    <template if:true={results.length}>
+        <ul>
+            <template for:each={results} for:item="result">
+                <li key={result.Id} data-id={result.Id} onclick={handleSelect}>
+                    {result.Name}
+                </li>
+            </template>
+        </ul>
+    </template>
+</template>

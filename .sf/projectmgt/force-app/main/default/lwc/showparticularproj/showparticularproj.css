@@ -1,0 +1,128 @@
+.slds-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.5);
+    z-index: 999;
+}
+
+.slds-modal {
+    display: block;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.2);
+    max-width: 500px;
+    width: 100%;
+}
+.slds-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.5);
+    z-index: 999;
+}
+
+.slds-modal {
+    display: block;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.2);
+    max-width: 500px;
+    width: 100%;
+}
+
+
+
+
+.progress-circle-container {
+    text-align: center;
+    position: relative;
+    margin-bottom: 1rem; /* Space between the progress circle and tree grid */
+}
+
+.progress-circle {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin: 0 auto;
+    background: lightgray; /* Fallback color if conic-gradient fails */
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.progress-inner-circle {
+    width: 100px;
+    height: 100px;
+    background-color: white;
+    border-radius: 50%;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.progress-percentage {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: lightblue;
+}
+
+.progress-label {
+    margin-top: 15px;
+    font-size: 1.2rem;
+    color: var(--slds-text-color_inverse);
+}
+
+.slds-text-align_center {
+    text-align: center;
+}
+
+.slds-tree-grid .slds-cell--align-center {
+    text-align: center;
+    vertical-align: middle; /* Ensure vertical centering */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.red-background {
+    background-color: #f4cccc;
+}
+
+.custom-dropdown-container {
+    position: absolute; /* Ensure dropdown is positioned above */
+    z-index: 1000; /* High z-index to ensure it is on top */
+    top: 50px; /* Adjust positioning as needed */
+}
+
+/* Dropdown actions class */
+.slds-dropdown {
+    position: absolute; /* Ensure dropdowns float above other content */
+    z-index: 1000; /* High z-index to ensure it is on top */
+}
+
+/* Optional: Ensure status is behind dropdowns */
+.status-class {
+    position: relative; /* Default positioning */
+    z-index: 1; /* Lower z-index compared to dropdown actions */
+}
+
+
+
+/* Styling for modal container */

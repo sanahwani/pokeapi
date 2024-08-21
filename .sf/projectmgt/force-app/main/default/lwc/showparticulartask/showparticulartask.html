@@ -1,0 +1,14 @@
+<template>
+    <lightning-card title="Task Tree Grid">
+        <div class="slds-p-around_medium">
+            <lightning-tree-grid
+                hide-checkbox-column
+                columns={gridColumns}
+                data={gridData}
+                key-field="Id"
+                onrowaction={handleRowAction}
+            >
+            </lightning-tree-grid>
+        </div>
+    </lightning-card>
+</template>

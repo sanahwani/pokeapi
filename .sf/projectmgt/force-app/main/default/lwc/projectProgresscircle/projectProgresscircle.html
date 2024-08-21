@@ -1,0 +1,37 @@
+<template>
+    <lightning-card title="Project Progress">
+        <template if:true={currentPageProjects}>
+            <div class="slds-grid slds-wrap slds-p-around_medium">
+                <template for:each={currentPageProjects} for:item="project">
+                    <div key={project.Id} class="slds-col slds-size_1-of-4 slds-p-around_small">
+                        <div class="progress-circle-container">
+                            <div class="progress-circle" style={project.progressStyle}>
+                                <div class="progress-inner-circle">
+                                    <span class={project.percentageClass}>{project.percentage}%</span>
+                                </div>
+                            </div>
+                            <div class="progress-label slds-text-heading_medium">
+                                {project.Name}
+                            </div>
+                            <div class="task-info">
+                                {project.Completed_Tasks__c} of {project.Total_Tasks__c} Tasks Completed
+                            </div>
+                            <!-- Alert message for overdue/delayed projects -->
+                            <template if:true={project.isDelayed}>
+                                <div class="alert-message slds-text-color_error slds-m-top_small">
+                                    Project Overdue/Delayed!
+                                </div>
+                            </template>
+                        </div>
+                    </div>
+                </template>
+            </div>
+        </template>
+
+        <!-- Pagination Controls -->
+        <div class="pagination-controls slds-m-top_medium slds-text-align_center">
+            <lightning-button label="Previous" onclick={handlePreviousPage} disabled={isPreviousDisabled}></lightning-button>
+            <lightning-button label="Next" onclick={handleNextPage} disabled={isNextDisabled}></lightning-button>
+        </div>
+    </lightning-card>
+</template>

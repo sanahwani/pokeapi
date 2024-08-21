@@ -1,0 +1,66 @@
+/* Ensure that the overall container remains stable and does not shift when content is added */
+.progress-circle-container {
+    text-align: center;
+    min-height: 150px; /* Set a minimum height to prevent the container from resizing */
+}
+
+/* Style for the progress circle */
+.progress-circle {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: lightgray; /* Base color */
+    transition: background-color 0.3s ease-in-out; /* Smooth transition for background */
+}
+
+/* Inner circle for displaying the percentage */
+.progress-inner-circle {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease-in-out; /* Smooth transition for any scaling */
+}
+
+/* Percentage text styling */
+.progress-percentage {
+    font-size: 1.5rem;
+    font-weight: bold;
+    transition: opacity 0.3s ease-in-out; /* Smooth transition for text appearance */
+    will-change: opacity, transform; /* Hint to browser for smoother transitions */
+}
+
+/* Label below the circle */
+.progress-label {
+    margin-top: 0.5rem;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #333;
+}
+
+/* Add a shadow effect to give the circle a more stable appearance */
+.progress-circle {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Ensure that the entire component does not shift unexpectedly */
+.slds-col {
+    min-width: 120px; /* Minimum width to stabilize the column */
+    max-width: 120px; /* Max width to avoid resizing */
+    padding: 10px;
+}
+
+/* Flexbox fallback for the grid layout to prevent shaking */
+.slds-grid {
+    display: flex;
+    align-items: center; /* Align items vertically centered */
+    justify-content: center; /* Center items horizontally */
+    gap: 20px; /* Space between grid items */
+}

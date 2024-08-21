@@ -1,0 +1,15 @@
+<template>
+    <lightning-card title="Project Details">
+        <div class="slds-p-around_medium">
+            <lightning-tree-grid
+                class="custom-tree-grid"
+                hide-checkbox-column
+                columns={gridColumns}
+                data={gridData}
+                key-field="Id"
+                row-attributes={getRowAttributes}
+                onrowaction={handleRowAction}>
+            </lightning-tree-grid>
+        </div>
+    </lightning-card>
+</template>
